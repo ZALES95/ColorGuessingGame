@@ -1,0 +1,268 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+  background: #232323;
+  padding-bottom: 1500px;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #2c8e99;
+}
+.nav__title {
+  font-size: 3.6rem;
+  margin: 0.5em 0;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px rgb(92, 92, 92);
+  text-transform: uppercase;
+}
+.nav__random-color {
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px rgb(92, 92, 92);
+}
+.nav__settings {
+  width: 100%;
+  background-color: #fff;
+  color: #2c8e99;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.nav__settings .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__set-new-colors {
+  transition: 0.3s;
+  padding: 0.8em 0.8em;
+}
+.nav__set-new-colors:hover {
+  cursor: pointer;
+  color: #2e7078;
+}
+.nav__reset {
+  transition: 0.3s;
+  padding: 0.8em 0.4em;
+}
+.nav__reset:hover {
+  cursor: pointer;
+  color: #2e7078;
+}
+.nav__level-changer {
+  display: flex;
+}
+.nav__easy {
+  transition: 0.3s;
+  padding: 0.8em 0.4em;
+  padding-right: 0.4em;
+}
+.nav__easy:hover {
+  cursor: pointer;
+  color: #2e7078;
+}
+.nav__hard {
+  transition: 0.3s;
+  padding: 0.8em 0.4em;
+}
+.nav__hard:hover {
+  cursor: pointer;
+  color: #2e7078;
+}
+.nav__game-info {
+  width: 100%;
+  background-color: #232323;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.nav__game-info .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav__correct {
+  color: #198754;
+  padding: 0.8em 0.4em;
+}
+.nav__mistakes {
+  color: rgb(255, 51, 51);
+}
+
+.squares {
+  margin: 3em auto;
+  justify-content: center;
+}
+.squares .square {
+  background-color: rgb(180, 31, 31);
+  height: 200px;
+  margin: 2em;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.score {
+  position: fixed;
+  width: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2em;
+  color: #2c8e99;
+  box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 650px;
+  min-width: 270px;
+}
+.score__info {
+  width: 100%;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.score__info .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.score__correct {
+  padding: 0.8em 0.4em;
+}
+.score h1 {
+  font-size: 3.6rem;
+  margin: 0.5em 0;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px rgb(92, 92, 92);
+  text-transform: uppercase;
+}
+.score h2 {
+  font-size: 2.4rem;
+  margin: 0.5em 0;
+  font-weight: bold;
+}
+.score__desc {
+  font-size: 2.4rem;
+  margin: 0.5em 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.score .restart-button {
+  font-size: 3.6rem;
+  cursor: pointer;
+  background: none;
+}
+.score .restart-button i {
+  color: #2c8e99;
+}
+.score__record-info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.background-level {
+  background-color: #2c8e99;
+  color: rgb(255, 255, 255);
+}
+.background-level:hover {
+  color: rgb(255, 255, 255);
+}
+
+.showResultClass {
+  display: flex;
+  -webkit-animation: fadeIn 0.3s ease-in-out forwards;
+          animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.grayColor {
+  color: rgba(44, 142, 153, 0.4941176471);
+}
+.grayColor:hover {
+  color: rgba(44, 142, 153, 0.4941176471);
+}/*# sourceMappingURL=style.css.map */
